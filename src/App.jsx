@@ -60,9 +60,9 @@ export default function App() {
     }
   }
   return (
-    <div class="w-full h-screen bg-gradient-to-b to-yellow-600 from-50% from-black to-50% flex justify-center items-center">
+    <div class="w-full h-screen bg-black flex justify-center items-center bg-gradient-to-b to-blue-950 from-black overflow-hidden">
       {/*container*/}
-      <div className="w-5/12 h-5/6 bg-cyan-950 rounded-3xl px-10 py-20" >
+      <div className="w-5/12 h-5/6 bg-black rounded-3xl px-10 py-20 border border-gray-500 shadow-inner shadow-white" >
 
         {/*input container*/}
         <div className="grid grid-cols-12 gap-5">
@@ -70,7 +70,7 @@ export default function App() {
           <input className="h-12 col-span-9 rounded-md px-6 bg-transparent border-2 border-gray-500  hover:border-gray-400 focus:outline-none focus:border-gray-300 font-medium text-lg text-white placeholder:text-gray-500 placeholder:italic "ref={movieNameRef} placeholder='Search for movies, TV shows, or animes...' type="text" name="search" id="search"></input>
           {/*sumbit button*/}
           <button 
-            className="h-12 col-span-3 rounded-md bg-yellow-500 font-medium text-lg px-10 hover:bg-yellow-400 shadow-inner shadow-yellow-600 text-center"
+            className="h-12 col-span-3 rounded-md bg-gradient-to-b from-black to-blue-950 hover:to-blue-900 hover:scale-105 shadow-inner shadow-blue-700 text-white font-medium text-lg px-10 text-center"
             id="search-button" 
             type="submit"
             onClick={getMovie}
@@ -82,16 +82,16 @@ export default function App() {
         {/*error container*/}
         <div className="mt-5 flex justify-center items-center align-center h-full w-full text-white text-center text-2xl font-semibold" id="error" ref={error}></div>
         {/*result wrapper*/}
-          <div className="hidden" id="result-wrapper"  ref={resultWrapper}>
+          <div className="hidden " id="result-wrapper"  ref={resultWrapper}>
           {/*results container*/}
           <div className="mt-5 grid grid-cols-12">
             {/*photo cover*/}
             <div className="col-span-5 flex h-96" id="result" ref={result}></div>
             <div className="col-span-7">
               {/*movie title*/}
-              <div className="h-10 w-full text-white text-center text-4xl font-bold" id="movie-title" ref={movieTitleRef}></div>
+              <div className="h-30 w-full text-white text-center text-4xl font-bold overflow-hidden" id="movie-title" ref={movieTitleRef}></div>
               {/*movie rating*/}
-              <div className="mt-14 flex justify-center items-center h-10 w-full text-white text-center text-2xl font-semibold" id="movie-Rating" ref={movieRatingRef}></div>
+              <div className="mt-10 flex justify-center items-center h-10 w-full text-white text-center text-2xl font-semibold" id="movie-Rating" ref={movieRatingRef}></div>
               {/*movie details*/}
               <div className="mt-5 flex justify-center items-center h-10 w-full text-gray-500 text-center text-2xl font-thin" id="movie-Details" ref={movieDetailsRef}></div>
               {/*movie genre*/}
