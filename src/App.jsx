@@ -57,17 +57,17 @@ export default function App() {
     }
   }
   return (
-    <div class="w-full h-screen bg-black flex justify-center items-center bg-gradient-to-b to-blue-950 from-black overflow-hidden">
+    <div class="w-full h-screen flex justify-center items-center bg-gradient-to-b to-blue-950 from-black overflow-hidden">
       {/*container*/}
-      <div className="w-5/12 h-5/6 bg-black rounded-3xl px-10 py-20 border border-gray-500 shadow-inner shadow-white" >
+      <div className="xl:w-5/12 w-11/12 h-5/6 bg-black rounded-3xl md:px-10 px-5 md:py-20 py-5 border border-gray-500 shadow-inner shadow-white  overflow-y-scroll md:overflow-visible" >
 
         {/*input container*/}
-        <div className="grid grid-cols-12 gap-5">
+        <div className="grid md:grid-cols-12 grid-cols-6 md:gap-5 gap-2">
           {/*input field*/}
-          <input className="h-12 col-span-9 rounded-md px-6 bg-transparent border-2 border-gray-500 hover:border-gray-400 focus:outline-none focus:border-gray-300 font-medium text-lg text-white placeholder:text-gray-500 placeholder:italic "ref={movieNameRef} placeholder='Search for movies, TV shows, or animes...' type="text" name="search" id="search"></input>
+          <input className="h-12 w-full md:col-span-9 col-span-4 rounded-md px-6 bg-transparent border-2 border-gray-500 hover:border-gray-400 focus:outline-none focus:border-gray-300 font-medium text-lg text-white placeholder:text-gray-500 placeholder:italic "ref={movieNameRef} placeholder='Search for movies, TV shows, or animes...' type="text" name="search" id="search"></input>
           {/*sumbit button*/}
           <button 
-            className="h-12 col-span-3 rounded-md bg-gradient-to-b from-black to-blue-950 hover:to-blue-900 hover:scale-105 shadow-inner shadow-blue-700 text-white font-medium text-lg px-10 text-center"
+            className="h-12 md:col-span-3 col-span-2 rounded-md bg-gradient-to-b from-black to-blue-950 hover:to-blue-900 hover:scale-105 shadow-inner shadow-blue-700 text-white font-medium md:text-lg md:px-10 px-6 text-center"
             id="search-button" 
             type="submit"
             onClick={getMovie}
@@ -81,27 +81,27 @@ export default function App() {
         {/*result wrapper*/}
           <div className="hidden " id="result-wrapper"  ref={resultWrapper}>
           {/*results container*/}
-          <div className="mt-5 grid grid-cols-12">
+          <div className="mt-5 md:grid grid-cols-12">
             {/*photo cover*/}
             <div className="col-span-5 flex h-96" id="result" ref={result}></div>
             <div className="col-span-7">
               {/*movie title*/}
-              <div className="h-30 w-full text-white text-center text-4xl font-bold overflow-hidden" id="movie-title" ref={movieTitleRef}></div>
+              <div className="h-30 w-full md:mt-0 mt-5 text-white text-center text-4xl font-bold overflow-hidden" id="movie-title" ref={movieTitleRef}></div>
               {/*movie rating*/}
               <div className="mt-5 flex justify-center items-center h-10 w-full text-white text-center text-2xl font-semibold" id="movie-Rating" ref={movieRatingRef}></div>
               {/*movie details*/}
               <div className="mt-5 flex justify-center items-center h-10 w-full text-gray-500 text-center text-2xl font-thin" id="movie-Details" ref={movieDetailsRef}></div>
               {/*movie genre*/}
-              <div className="pl-8 mt-10 grid grid-flow-col gap-10 h-10 w-full text-white text-center text-xl font-thin" id="movie-Genre" ref={movieGenreRef}></div>
+              <div className="md:pl-8 mt-10 grid md:grid-flow-col md:gap-10 gap-5 md:h-10 w-full text-white text-center text-xl font-thin" id="movie-Genre" ref={movieGenreRef}></div>
             </div>
           </div>
           
           {/*movie plot*/}
-          <div className="h-10 w-full mt-5 mb-20" id="movie-plot" ref={moviePlotRef}>
+          <div className="md:h-10 w-full mt-5 md:mb-20 mb-5" id="movie-plot" ref={moviePlotRef}>
 
           </div>
           {/*movie cast*/}
-          <div className="h-10 w-full " id="movie-cast" ref={movieCastRef}></div>
+          <div className="md:mb-0 mb-10 h-10 w-full " id="movie-cast" ref={movieCastRef}></div>
         </div>
       </div>
     </div>
