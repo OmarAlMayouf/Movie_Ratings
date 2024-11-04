@@ -1,6 +1,6 @@
 import { useRef } from "react"
 
-const API_KEY = "e737ad74";
+const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
 
 export default function App() {
   const movieNameRef = useRef(null);
