@@ -57,7 +57,7 @@ export default function App() {
     }
   }
   return (
-    <div class="w-full h-screen flex justify-center items-center bg-gradient-to-b to-blue-950 from-black overflow-hidden">
+    <div class="w-full h-screen flex justify-center md:items-center pt-14 md:pt-0 bg-gradient-to-b to-blue-950 from-black overflow-hidden">
       {/*container*/}
       <div className="xl:w-5/12 w-11/12 h-5/6 bg-black rounded-3xl md:px-10 px-5 md:py-20 py-5 border border-gray-500 shadow-inner shadow-white  overflow-y-scroll md:overflow-visible" >
 
