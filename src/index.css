@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    input:-webkit-autofill {
+      box-shadow: inset 0 0 0 1000px rgb(0, 0, 0); /* Change the background to a darker shade */
+      -webkit-box-shadow: inset 0 0 0 1000px rgb(0, 0, 0);
+      -webkit-text-fill-color: white; /* Change this to the desired text color */
+      caret-color: white;
+    }
+  
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      -webkit-text-fill-color: white; /* Ensure it remains white on hover and focus */
+    }
+  }
