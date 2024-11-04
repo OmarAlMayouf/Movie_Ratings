@@ -88,7 +88,7 @@ export default function App() {
               {/*movie title*/}
               <div className="h-30 w-full text-white text-center text-4xl font-bold overflow-hidden" id="movie-title" ref={movieTitleRef}></div>
               {/*movie rating*/}
-              <div className="mt-10 flex justify-center items-center h-10 w-full text-white text-center text-2xl font-semibold" id="movie-Rating" ref={movieRatingRef}></div>
+              <div className="mt-5 flex justify-center items-center h-10 w-full text-white text-center text-2xl font-semibold" id="movie-Rating" ref={movieRatingRef}></div>
               {/*movie details*/}
               <div className="mt-5 flex justify-center items-center h-10 w-full text-gray-500 text-center text-2xl font-thin" id="movie-Details" ref={movieDetailsRef}></div>
               {/*movie genre*/}
